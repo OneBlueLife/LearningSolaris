@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/db/migrations/001-example.js"],
+  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        // Use the collection function to get the desired collection to modify\n        // const users = db.collection('users');\n\n        // Migrate the database, for example:\n        // await users.updateOne({\n        //     username: 'Hyperi0n'\n        // }, {\n        //     $set: {\n        //         'roles.administrator': true\n        //     }\n        // });\n\n        // NOTE: All migrations must be IDEMPOTENT - It can be run multiple times without changing\n        // the result beyond the initial execution of the script.\n    }\n};\n"],
+  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AAAA,EAelB;AACJ;",
+  "names": []
+}

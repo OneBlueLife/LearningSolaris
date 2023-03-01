@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../client/babel.config.js"],
+  "sourcesContent": ["module.exports = {\n  presets: [\n    '@vue/app'\n  ]\n}\n"],
+  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACf,SAAS;AAAA,IACP;AAAA,EACF;AACF;",
+  "names": []
+}

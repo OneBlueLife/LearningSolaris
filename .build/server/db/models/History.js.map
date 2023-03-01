@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/db/models/History.ts"],
+  "sourcesContent": ["const mongoose = require('mongoose');\nconst mongooseLeanDefaults = require('mongoose-lean-defaults');\n\nimport schema from './schemas/history';\n\nschema.plugin(mongooseLeanDefaults);\n\nconst model = mongoose.model('gameHistory', schema);\n\nexport default model;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGA,qBAAmB;AAHnB,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,uBAAuB,QAAQ,wBAAwB;AAI7D,eAAAA,QAAO,OAAO,oBAAoB;AAElC,MAAM,QAAQ,SAAS,MAAM,eAAe,eAAAA,OAAM;AAElD,IAAO,kBAAQ;",
+  "names": ["schema"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../client/src/eventBus.js"],
+  "sourcesContent": ["import Vue from 'vue'\n\nconst eventBus = new Vue()\n\nexport default eventBus"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,iBAAgB;AAEhB,MAAM,WAAW,IAAI,WAAAA,QAAI;AAEzB,IAAO,mBAAQ;",
+  "names": ["Vue"]
+}

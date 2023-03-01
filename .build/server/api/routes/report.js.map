@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/api/routes/report.ts"],
+  "sourcesContent": ["import { Router } from \"express\";\nimport { ExpressJoiInstance } from \"express-joi-validation\";\nimport { DependencyContainer } from \"../../services/types/DependencyContainer\";\nimport ReportController from '../controllers/report';\nimport { MiddlewareContainer } from \"../middleware\";\n\nexport default (router: Router, mw: MiddlewareContainer, validator: ExpressJoiInstance, container: DependencyContainer) => {\n    const controller = ReportController(container);\n\n    router.post('/api/game/:gameId/report',\n        mw.auth.authenticate(),\n        mw.game.loadGame({\n            lean: true,\n            settings: true,\n            'galaxy.players': true\n        }),\n        mw.player.loadPlayer,\n        controller.create,\n        mw.core.handleError);\n\n    return router;\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGA,oBAA6B;AAG7B,IAAO,iBAAQ,CAAC,QAAgB,IAAyB,WAA+B,cAAmC;AACvH,QAAM,iBAAa,cAAAA,SAAiB,SAAS;AAE7C,SAAO;AAAA,IAAK;AAAA,IACR,GAAG,KAAK,aAAa;AAAA,IACrB,GAAG,KAAK,SAAS;AAAA,MACb,MAAM;AAAA,MACN,UAAU;AAAA,MACV,kBAAkB;AAAA,IACtB,CAAC;AAAA,IACD,GAAG,OAAO;AAAA,IACV,WAAW;AAAA,IACX,GAAG,KAAK;AAAA,EAAW;AAEvB,SAAO;AACX;",
+  "names": ["ReportController"]
+}

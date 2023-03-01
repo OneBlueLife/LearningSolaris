@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/services/types/events/GameEnded.ts"],
+  "sourcesContent": ["import { GameRankingResult } from \"../Rating\";\nimport { BaseGameEvent } from \"./BaseGameEvent\";\n\nexport default interface GameEndedEvent extends BaseGameEvent {\n    rankingResult: GameRankingResult | null;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAKC;",
+  "names": []
+}

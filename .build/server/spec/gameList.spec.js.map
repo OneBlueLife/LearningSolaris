@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../server/spec/gameList.spec.ts"],
+  "sourcesContent": ["import GameListService from '../services/gameList';\n\nconst fakeGameModel = {\n    find() {\n        return 1;\n    }\n};\n\ndescribe('game list', () => {\n    let gameListService;\n\n    beforeAll(() => {\n        // @ts-ignore\n        gameListService = new GameListService(fakeGameModel);\n    });\n    \n    // Not really sure what's the point in testing this. Maybe there's a better way to mock\n    // and intercept calling of mongoose functions?\n    it('should list official games', async () => {\n        let result = await gameListService.listOfficialGames();\n\n        expect(result).toBe(1);\n    });\n\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA,sBAA4B;AAE5B,MAAM,gBAAgB;AAAA,EAClB,OAAO;AACH,WAAO;AAAA,EACX;AACJ;AAEA,SAAS,aAAa,MAAM;AACxB,MAAI;AAEJ,YAAU,MAAM;AAEZ,sBAAkB,IAAI,gBAAAA,QAAgB,aAAa;AAAA,EACvD,CAAC;AAID,KAAG,8BAA8B,YAAY;AACzC,QAAI,SAAS,MAAM,gBAAgB,kBAAkB;AAErD,WAAO,MAAM,EAAE,KAAK,CAAC;AAAA,EACzB,CAAC;AAEL,CAAC;",
+  "names": ["GameListService"]
+}

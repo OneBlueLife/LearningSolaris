@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/db/models/schemas/conversation.ts"],
+  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nimport ConversationMessageSchema from './conversationMessage';\n\nconst schema = new Schema({\n    participants: [{ type: Types.ObjectId, required: true }],\n    createdBy: { type: Types.ObjectId, required: false, default: null },\n    name: { type: Types.String, required: true },\n    mutedBy: [{ type: Types.ObjectId, required: true }],\n    messages: [ConversationMessageSchema]\n});\n\nexport default schema;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAIA,iCAAsC;AAJtC,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAIrB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,cAAc,CAAC,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK,CAAC;AAAA,EACvD,WAAW,EAAE,MAAM,MAAM,UAAU,UAAU,OAAO,SAAS,KAAK;AAAA,EAClE,MAAM,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAC3C,SAAS,CAAC,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK,CAAC;AAAA,EAClD,UAAU,CAAC,2BAAAA,OAAyB;AACxC,CAAC;AAED,IAAO,uBAAQ;",
+  "names": ["ConversationMessageSchema"]
+}

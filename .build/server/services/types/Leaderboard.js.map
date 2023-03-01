@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Leaderboard.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { Guild } from \"./Guild\";\nimport { Player } from \"./Player\";\n\nexport interface PlayerStatistics {\n    totalStars: number;\n    totalHomeStars: number;\n    totalCarriers: number;\n    totalShips: number;\n    totalShipsMax: number | null;\n    totalEconomy: number;\n    totalIndustry: number;\n    totalScience: number;\n    newShips: number;\n    warpgates: number;\n    totalStarSpecialists: number;\n    totalCarrierSpecialists: number;\n    totalSpecialists: number;\n};\n\nexport interface LeaderboardPlayer {\n    player: Player;\n    stats: PlayerStatistics;\n    isKingOfTheHill?: boolean;\n};\n\nexport interface Leaderboard {\n    leaderboard: LeaderboardPlayer[];\n    fullKey: string;\n};\n\nexport interface LeaderboardUser {\n    _id: DBObjectId,\n    username: string;\n    position: number;\n    guild: Guild | null;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAkBC;AAMA;AAKA;AAOA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Diplomacy.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport type DiplomaticState = 'enemies' | 'neutral' | 'allies';\n\nexport interface DiplomaticStatus {\n    playerIdFrom: DBObjectId;\n    playerIdTo: DBObjectId;\n    playerFromAlias: string;\n    playerToAlias: string;\n    statusFrom: DiplomaticState;\n    statusTo: DiplomaticState;\n    actualStatus: DiplomaticState;\n};\n\nexport interface DiplomacyEvent {\n    playerId: DBObjectId;\n    type: string;\n    data: DiplomaticStatus;\n    sentDate: Date;\n    sentTick: number;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAYC;AAQA;",
+  "names": []
+}

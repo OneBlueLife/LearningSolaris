@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../server/jobs/gameTick.ts"],
+  "sourcesContent": ["import { DependencyContainer } from \"../services/types/DependencyContainer\";\n\nexport default (container: DependencyContainer) => {\n\n    return {\n\n        async handler(job, done) {\n            let games = await container.gameListService.listInProgressGamesGameTick();\n\n            for (let i = 0; i < games.length; i++) {\n                let game = games[i];\n\n                if (container.gameTickService.canTick(game)) {\n                    try {\n                        await container.gameService.lock(game._id, true);\n                        await container.gameTickService.tick(game._id);\n                    } catch (e) {\n                        console.error(e);\n                    } finally {\n                        await container.gameService.lock(game._id, false);\n                    }\n                }\n            }\n\n            done();\n        }\n\n    };\n    \n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,IAAO,mBAAQ,CAAC,cAAmC;AAE/C,SAAO;AAAA,IAEH,MAAM,QAAQ,KAAK,MAAM;AACrB,UAAI,QAAQ,MAAM,UAAU,gBAAgB,4BAA4B;AAExE,eAAS,IAAI,GAAG,IAAI,MAAM,QAAQ,KAAK;AACnC,YAAI,OAAO,MAAM;AAEjB,YAAI,UAAU,gBAAgB,QAAQ,IAAI,GAAG;AACzC,cAAI;AACA,kBAAM,UAAU,YAAY,KAAK,KAAK,KAAK,IAAI;AAC/C,kBAAM,UAAU,gBAAgB,KAAK,KAAK,GAAG;AAAA,UACjD,SAAS,GAAP;AACE,oBAAQ,MAAM,CAAC;AAAA,UACnB,UAAE;AACE,kBAAM,UAAU,YAAY,KAAK,KAAK,KAAK,KAAK;AAAA,UACpD;AAAA,QACJ;AAAA,MACJ;AAEA,WAAK;AAAA,IACT;AAAA,EAEJ;AAEJ;",
+  "names": []
+}

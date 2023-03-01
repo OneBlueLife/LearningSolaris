@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../client/src/services/api/report.js"],
+  "sourcesContent": ["import axios from 'axios'\nimport BaseApiService from './base'\n\nclass ReportApiService extends BaseApiService {\n  \n  reportPlayer (gameId, playerId, abuse, spamming, multiboxing, inappropriateAlias) {\n    return axios.post(this.BASE_URL + 'game/' + gameId + '/report', \n      { \n        playerId,\n        reasons: {\n          abuse,\n          spamming,\n          multiboxing,\n          inappropriateAlias\n        }\n      },\n      { withCredentials: true })\n  }\n\n}\n\nexport default new ReportApiService()\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAClB,kBAA2B;AAE3B,MAAM,yBAAyB,YAAAA,QAAe;AAAA,EAE5C,aAAc,QAAQ,UAAU,OAAO,UAAU,aAAa,oBAAoB;AAChF,WAAO,aAAAC,QAAM;AAAA,MAAK,KAAK,WAAW,UAAU,SAAS;AAAA,MACnD;AAAA,QACE;AAAA,QACA,SAAS;AAAA,UACP;AAAA,UACA;AAAA,UACA;AAAA,UACA;AAAA,QACF;AAAA,MACF;AAAA,MACA,EAAE,iBAAiB,KAAK;AAAA,IAAC;AAAA,EAC7B;AAEF;AAEA,IAAO,iBAAQ,IAAI,iBAAiB;",
+  "names": ["BaseApiService", "axios"]
+}

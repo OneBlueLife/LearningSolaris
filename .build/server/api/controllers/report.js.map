@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/api/controllers/report.ts"],
+  "sourcesContent": ["import { DependencyContainer } from '../../services/types/DependencyContainer';\nimport { mapToReportCreateReportRequest } from '../requests/report';\n\nexport default (container: DependencyContainer) => {\n    return {\n        create: async (req, res, next) => {\n            try {\n                const reqObj = mapToReportCreateReportRequest(req.body);\n                \n                await container.reportService.reportPlayer(req.game, reqObj.playerId, req.session.userId, reqObj.reasons);\n                \n                return res.sendStatus(200);\n            } catch (err) {\n                return next(err);\n            }\n        }\n    }\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,oBAA+C;AAE/C,IAAO,iBAAQ,CAAC,cAAmC;AAC/C,SAAO;AAAA,IACH,QAAQ,OAAO,KAAK,KAAK,SAAS;AAC9B,UAAI;AACA,cAAM,aAAS,8CAA+B,IAAI,IAAI;AAEtD,cAAM,UAAU,cAAc,aAAa,IAAI,MAAM,OAAO,UAAU,IAAI,QAAQ,QAAQ,OAAO,OAAO;AAExG,eAAO,IAAI,WAAW,GAAG;AAAA,MAC7B,SAAS,KAAP;AACE,eAAO,KAAK,GAAG;AAAA,MACnB;AAAA,IACJ;AAAA,EACJ;AACJ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Rating.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport interface EloRatingChange {\n    _id: DBObjectId;\n    newRating: number;\n    oldRating: number;\n};\n\nexport interface EloRatingChangeResult {\n    winner: EloRatingChange;\n    loser: EloRatingChange;\n};\n\nexport interface GameRanking {\n    playerId: DBObjectId;\n    current: number;\n    new: number;\n};\n\nexport interface GameRankingResult {\n    ranks: GameRanking[];\n    eloRating: EloRatingChangeResult | null;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAMC;AAKA;AAMA;AAKA;",
+  "names": []
+}

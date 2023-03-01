@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../client/src/services/api/base.js"],
+  "sourcesContent": ["import axios from 'axios'\nimport router from '../../router'\n\nclass BaseApiService {\n  constructor () {\n    this.BASE_URL = process.env.VUE_APP_API_HOST + '/api/'\n\n    axios.interceptors.response.use(\n      response => {\n        return response\n      }, error => {\n        // If any Unathorized responses come back, redirect to login page.\n        if (error.response.status === 401) {\n          router.push({ name: 'home' })\n        }\n\n        return Promise.reject({ ...error })\n      })\n  }\n}\n\nexport default BaseApiService\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAClB,oBAAmB;AAEnB,MAAM,eAAe;AAAA,EACnB,cAAe;AACb,SAAK,WAAW,QAAQ,IAAI,mBAAmB;AAE/C,iBAAAA,QAAM,aAAa,SAAS;AAAA,MAC1B,cAAY;AACV,eAAO;AAAA,MACT;AAAA,MAAG,WAAS;AAEV,YAAI,MAAM,SAAS,WAAW,KAAK;AACjC,wBAAAC,QAAO,KAAK,EAAE,MAAM,OAAO,CAAC;AAAA,QAC9B;AAEA,eAAO,QAAQ,OAAO,EAAE,GAAG,MAAM,CAAC;AAAA,MACpC;AAAA,IAAC;AAAA,EACL;AACF;AAEA,IAAO,eAAQ;",
+  "names": ["axios", "router"]
+}

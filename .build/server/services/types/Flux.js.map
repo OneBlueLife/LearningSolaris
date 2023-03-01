@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Flux.ts"],
+  "sourcesContent": ["export interface Flux {\n    id: number;\n    name: string;\n    month: string;\n    description: string;\n    tooltip: string;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAMC;",
+  "names": []
+}

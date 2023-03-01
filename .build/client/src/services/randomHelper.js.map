@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../client/src/services/randomHelper.js"],
+  "sourcesContent": ["class RandomHelper {\n\n    // Note that the max is INCLUSIVE\n    getRandomNumberBetween(min, max) {\n        return Math.floor(Math.random() * (max - min + 1) + min);\n    }\n\n}\n\nexport default new RandomHelper()"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,aAAa;AAAA,EAGf,uBAAuB,KAAK,KAAK;AAC7B,WAAO,KAAK,MAAM,KAAK,OAAO,KAAK,MAAM,MAAM,KAAK,GAAG;AAAA,EAC3D;AAEJ;AAEA,IAAO,uBAAQ,IAAI,aAAa;",
+  "names": []
+}

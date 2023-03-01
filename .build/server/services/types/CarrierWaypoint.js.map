@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/CarrierWaypoint.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport type CarrierWaypointActionType = 'nothing'|'collectAll'|'dropAll'|'collect'|'drop'|'collectAllBut'|'dropAllBut'|'dropPercentage'|'collectPercentage'|'garrison';\n\nexport interface CarrierWaypointBase {\n    source: DBObjectId;\n    destination: DBObjectId;\n    action: CarrierWaypointActionType;\n    actionShips: number;\n    delayTicks: number;\n};\n\nexport interface CarrierWaypoint extends CarrierWaypointBase {\n    _id: DBObjectId;\n    ticks?: number;\n    ticksEta?: number;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAUC;AAMA;",
+  "names": []
+}

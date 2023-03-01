@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../client/src/views/game/components/intel/PolarAreaChart.js"],
+  "sourcesContent": ["import { PolarArea, mixins } from 'vue-chartjs'\nconst { reactiveProp } = mixins\n\nexport default {\n  extends: PolarArea,\n  mixins: [reactiveProp],\n  props: ['options'],\n  mounted () {\n    // eslint-disable-next-line\n    Chart.defaults.global.defaultFontColor = '#fff'\n\n    // this.chartData is created in the mixin.\n    // If you want to pass options please create a local options object\n    this.renderChart(this.chartData, this.options)\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBAAkC;AAClC,MAAM,EAAE,aAAa,IAAI;AAEzB,IAAO,yBAAQ;AAAA,EACb,SAAS;AAAA,EACT,QAAQ,CAAC,YAAY;AAAA,EACrB,OAAO,CAAC,SAAS;AAAA,EACjB,UAAW;AAET,UAAM,SAAS,OAAO,mBAAmB;AAIzC,SAAK,YAAY,KAAK,WAAW,KAAK,OAAO;AAAA,EAC/C;AACF;",
+  "names": []
+}

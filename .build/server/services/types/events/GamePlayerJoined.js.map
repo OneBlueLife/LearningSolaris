@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/services/types/events/GamePlayerJoined.ts"],
+  "sourcesContent": ["import { BaseGameEvent } from \"./BaseGameEvent\";\n\nexport default interface GamePlayerJoinedEvent extends BaseGameEvent {\n    playerAlias: string;\n}"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

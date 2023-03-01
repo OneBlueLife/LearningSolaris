@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Location.ts"],
+  "sourcesContent": ["export interface Location {\n    x: number;\n    y: number;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAGC;",
+  "names": []
+}

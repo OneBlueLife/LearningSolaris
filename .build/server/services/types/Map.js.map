@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Map.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { Location } from \"./Location\";\n\nexport interface MapObject {\n    _id: DBObjectId;\n    ownedByPlayerId: DBObjectId | null;\n    location: Location;\n};\n\nexport interface MapObjectWithVisibility extends MapObject {\n    isAlwaysVisible?: boolean;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAOC;AAIA;",
+  "names": []
+}

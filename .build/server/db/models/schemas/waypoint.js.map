@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/db/models/schemas/waypoint.ts"],
+  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nconst schema = new Schema({\n    source: { type: Types.ObjectId, required: true },\n    destination: { type: Types.ObjectId, required: true },\n    action: { type: Types.String, required: true, enum: ['nothing', 'collectAll', 'dropAll', 'collect', 'drop', 'collectAllBut', 'dropAllBut', 'dropPercentage', 'collectPercentage', 'garrison'], default: 'nothing' },\n    actionShips: { type: Types.Number, required: true, default: 0 },\n    delayTicks: { type: Types.Number, required: true, default: 0 }\n});\n\nexport default schema;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAErB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,QAAQ,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK;AAAA,EAC/C,aAAa,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK;AAAA,EACpD,QAAQ,EAAE,MAAM,MAAM,QAAQ,UAAU,MAAM,MAAM,CAAC,WAAW,cAAc,WAAW,WAAW,QAAQ,iBAAiB,cAAc,kBAAkB,qBAAqB,UAAU,GAAG,SAAS,UAAU;AAAA,EAClN,aAAa,EAAE,MAAM,MAAM,QAAQ,UAAU,MAAM,SAAS,EAAE;AAAA,EAC9D,YAAY,EAAE,MAAM,MAAM,QAAQ,UAAU,MAAM,SAAS,EAAE;AACjE,CAAC;AAED,IAAO,mBAAQ;",
+  "names": []
+}

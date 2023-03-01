@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/GameTick.ts"],
+  "sourcesContent": ["import { Carrier } from \"./Carrier\";\nimport { CarrierWaypoint } from \"./CarrierWaypoint\";\nimport { Star } from \"./Star\";\n\nexport interface CarrierActionWaypoint {\n    carrier: Carrier;\n    star: Star;\n    waypoint: CarrierWaypoint;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAQC;",
+  "names": []
+}

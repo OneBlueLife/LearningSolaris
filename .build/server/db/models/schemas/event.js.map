@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/db/models/schemas/event.ts"],
+  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nconst schema = new Schema({\n    gameId: { type: Types.ObjectId, required: true },\n    playerId: { type: Types.ObjectId, required: false, default: null },\n    tick: { type: Types.Number, required: true },\n    type: { type: Types.String, required: true },\n    data: { type: Types.Mixed, required: true },\n    read: { type: Types.Boolean, required: false, default: false }\n});\n\nschema.index({gameId: 1, tick: 1}, {unique: false});\nschema.index({gameId: 1, playerId: 1}, {unique: false});\n\nexport default schema;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAErB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,QAAQ,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK;AAAA,EAC/C,UAAU,EAAE,MAAM,MAAM,UAAU,UAAU,OAAO,SAAS,KAAK;AAAA,EACjE,MAAM,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAC3C,MAAM,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAC3C,MAAM,EAAE,MAAM,MAAM,OAAO,UAAU,KAAK;AAAA,EAC1C,MAAM,EAAE,MAAM,MAAM,SAAS,UAAU,OAAO,SAAS,MAAM;AACjE,CAAC;AAED,OAAO,MAAM,EAAC,QAAQ,GAAG,MAAM,EAAC,GAAG,EAAC,QAAQ,MAAK,CAAC;AAClD,OAAO,MAAM,EAAC,QAAQ,GAAG,UAAU,EAAC,GAAG,EAAC,QAAQ,MAAK,CAAC;AAEtD,IAAO,gBAAQ;",
+  "names": []
+}

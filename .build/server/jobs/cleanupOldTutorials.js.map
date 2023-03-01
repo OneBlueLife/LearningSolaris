@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../server/jobs/cleanupOldTutorials.ts"],
+  "sourcesContent": ["import { DependencyContainer } from \"../services/types/DependencyContainer\";\n\nexport default (container: DependencyContainer) => {\n\n    return {\n\n        async handler(job, done) {\n            let games = await container.gameListService.listCompletedTutorials();\n\n            for (let i = 0; i < games.length; i++) {\n                let game = games[i];\n\n                try {\n                    await container.gameService.delete(game);\n                } catch (e) {\n                    console.error(e);\n                }\n            }\n\n            done();\n        }\n\n    };\n    \n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,IAAO,8BAAQ,CAAC,cAAmC;AAE/C,SAAO;AAAA,IAEH,MAAM,QAAQ,KAAK,MAAM;AACrB,UAAI,QAAQ,MAAM,UAAU,gBAAgB,uBAAuB;AAEnE,eAAS,IAAI,GAAG,IAAI,MAAM,QAAQ,KAAK;AACnC,YAAI,OAAO,MAAM;AAEjB,YAAI;AACA,gBAAM,UAAU,YAAY,OAAO,IAAI;AAAA,QAC3C,SAAS,GAAP;AACE,kBAAQ,MAAM,CAAC;AAAA,QACnB;AAAA,MACJ;AAEA,WAAK;AAAA,IACT;AAAA,EAEJ;AAEJ;",
+  "names": []
+}

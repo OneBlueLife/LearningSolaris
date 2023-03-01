@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../client/src/game/animation.js"],
+  "sourcesContent": ["import * as PIXI from 'pixi.js-legacy'\n\nclass AnimationService {\n  drawSelectedCircle (app, container, location) {\n    // It ain't pretty, but it works.\n    let graphics = new PIXI.Graphics()\n\n    graphics.radius = 1\n\n    graphics.animation = (delta) => {\n      if (graphics.alpha <= 0) {\n        return\n      }\n\n      graphics.clear()\n      graphics.lineStyle(1, 0xFFFFFF, 0.3)\n\n      graphics.alpha -= 0.02 * delta\n      graphics.radius = graphics.radius + delta\n\n      graphics.drawCircle(location.x, location.y, graphics.radius)\n    }\n\n    app.ticker.add(graphics.animation)\n\n    setTimeout(() => {\n      container.removeChild(graphics)\n      app.ticker.remove(graphics.animation)\n    }, 3000)\n\n    container.addChild(graphics)\n  }\n}\n\nexport default new AnimationService()\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,WAAsB;AAEtB,MAAM,iBAAiB;AAAA,EACrB,mBAAoB,KAAK,WAAW,UAAU;AAE5C,QAAI,WAAW,IAAI,KAAK,SAAS;AAEjC,aAAS,SAAS;AAElB,aAAS,YAAY,CAAC,UAAU;AAC9B,UAAI,SAAS,SAAS,GAAG;AACvB;AAAA,MACF;AAEA,eAAS,MAAM;AACf,eAAS,UAAU,GAAG,UAAU,GAAG;AAEnC,eAAS,SAAS,OAAO;AACzB,eAAS,SAAS,SAAS,SAAS;AAEpC,eAAS,WAAW,SAAS,GAAG,SAAS,GAAG,SAAS,MAAM;AAAA,IAC7D;AAEA,QAAI,OAAO,IAAI,SAAS,SAAS;AAEjC,eAAW,MAAM;AACf,gBAAU,YAAY,QAAQ;AAC9B,UAAI,OAAO,OAAO,SAAS,SAAS;AAAA,IACtC,GAAG,GAAI;AAEP,cAAU,SAAS,QAAQ;AAAA,EAC7B;AACF;AAEA,IAAO,oBAAQ,IAAI,iBAAiB;",
+  "names": []
+}

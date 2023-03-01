@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/db/models/schemas/payment.ts"],
+  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nconst schema = new Schema({\n    userId: { type: Types.ObjectId, required: true },\n    paymentId: { type: Types.String, required: true },\n    totalCost: { type: Types.Number, required: true },\n    totalQuantity: { type: Types.Number, required: true },\n    unitCost: { type: Types.Number, required: true }\n});\n\nschema.index({paymentId: 1}, {unique: false});\n\nexport default schema;\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAErB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,QAAQ,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK;AAAA,EAC/C,WAAW,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAChD,WAAW,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAChD,eAAe,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EACpD,UAAU,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AACnD,CAAC;AAED,OAAO,MAAM,EAAC,WAAW,EAAC,GAAG,EAAC,QAAQ,MAAK,CAAC;AAE5C,IAAO,kBAAQ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/api/requests/spectator.ts"],
+  "sourcesContent": ["import * as Joi from 'joi';\n\nexport const spectatorInviteSpectatorRequestSchema = Joi.object({\n    username: Joi.string().required().min(3).max(24)\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,UAAqB;AAEd,MAAM,wCAAwC,IAAI,OAAO;AAAA,EAC5D,UAAU,IAAI,OAAO,EAAE,SAAS,EAAE,IAAI,CAAC,EAAE,IAAI,EAAE;AACnD,CAAC;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Guild.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { SettingVisibility, User } from \"./User\";\n\nexport interface Guild {\n    _id: DBObjectId;\n    name: string;\n    tag: string;\n    leader: DBObjectId;\n    officers: DBObjectId[];\n    members: DBObjectId[];\n    invitees: DBObjectId[];\n    applicants: DBObjectId[];\n};\n\nexport interface GuildRank extends Guild {\n    totalRank: number;\n};\n\nexport interface GuildLeaderboard extends GuildRank {\n    memberCount: number;\n    position?: number;\n};\n\nexport interface GuildUserApplication {\n    name: string;\n    tag: string;\n    hasApplied: boolean;\n};\n\nexport interface GuildWithUsers {\n    _id: DBObjectId;\n    name: string;\n    tag: string;\n    leader?: User;\n    officers?: User[];\n    members?: User[];\n    invitees?: User[];\n    applicants?: User[];\n    totalRank?: number;\n};\n\nexport interface GuildUserWithTag {\n    _id: DBObjectId;\n    username: string;\n    displayGuildTag: SettingVisibility;\n    guild: Guild | null;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAYC;AAIA;AAKA;AAMA;AAYA;AAOA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/SpecialStar.ts"],
+  "sourcesContent": ["export type SpecialStarType = \n    'randomWormHoles' | \n    'randomNebulas' | \n    'randomAsteroidFields' | \n    'randomBlackHoles' | \n    'randomBinaryStars' | \n    'randomPulsars';\n\nexport interface SpecialStar {\n    id: SpecialStarType,\n    name: string;\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAWC;",
+  "names": []
+}

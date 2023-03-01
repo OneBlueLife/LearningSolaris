@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../server/services/types/Combat.ts"],
+  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { Specialist } from \"./Specialist\";\n\nexport interface Defender {\n    ships: number;\n    weaponsLevel: number;\n};\n\nexport interface Attacker {\n    ships: number;\n    weaponsLevel: number;\n};\n\nexport interface CombatWeapons {\n    defender: number;\n    defenderBase: number;\n    attacker: number;\n    attackerBase: number;\n};\n\nexport interface CombatPart {\n    defender: number;\n    attacker: number;\n};\n\nexport interface CombatStar {\n    _id: DBObjectId;\n    ownedByPlayerId: DBObjectId | null;\n    specialist: Specialist | null;\n    before: number;\n    lost: number;\n    after: number;\n    scrambled: boolean;\n};\n\nexport interface CombatCarrier {\n    _id: DBObjectId;\n    name: string;\n    ownedByPlayerId: DBObjectId;\n    specialist: Specialist | null;\n    before: number | string;\n    lost: number | string;\n    after: number | string;\n    scrambled: boolean;\n};\n\nexport interface CombatResultShips {\n    weapons: CombatWeapons;\n    before: CombatPart;\n    after: CombatPart;\n    lost: CombatPart;\n    needed?: CombatPart | null;\n};\n\nexport interface CombatResult extends CombatResultShips {\n    star: CombatStar | null;\n    carriers: CombatCarrier[];\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAMC;AAKA;AAOA;AAKA;AAUA;AAWA;AAQA;AAKA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../server/services/types/events/ConversationMessageSent.ts"],
+  "sourcesContent": ["import { Conversation } from \"../Conversation\";\nimport { ConversationMessageSentResult } from \"../ConversationMessage\";\nimport { BaseGameEvent } from \"./BaseGameEvent\";\n\nexport default interface ConversationMessageSentEvent extends BaseGameEvent {\n    conversation: Conversation,\n    sentMessageResult: ConversationMessageSentResult\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAOC;",
+  "names": []
+}

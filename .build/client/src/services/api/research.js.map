@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../client/src/services/api/research.js"],
+  "sourcesContent": ["import axios from 'axios'\nimport BaseApiService from './base'\n\nclass ResearchService extends BaseApiService {\n  updateResearchNow (gameId, preference) {\n    return axios.put(this.BASE_URL + 'game/' + gameId + '/research/now', {\n      preference\n    },\n    { withCredentials: true })\n  }\n\n  updateResearchNext (gameId, preference) {\n    return axios.put(this.BASE_URL + 'game/' + gameId + '/research/next', {\n      preference\n    },\n    { withCredentials: true })\n  }\n}\n\nexport default new ResearchService()\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAClB,kBAA2B;AAE3B,MAAM,wBAAwB,YAAAA,QAAe;AAAA,EAC3C,kBAAmB,QAAQ,YAAY;AACrC,WAAO,aAAAC,QAAM;AAAA,MAAI,KAAK,WAAW,UAAU,SAAS;AAAA,MAAiB;AAAA,QACnE;AAAA,MACF;AAAA,MACA,EAAE,iBAAiB,KAAK;AAAA,IAAC;AAAA,EAC3B;AAAA,EAEA,mBAAoB,QAAQ,YAAY;AACtC,WAAO,aAAAA,QAAM;AAAA,MAAI,KAAK,WAAW,UAAU,SAAS;AAAA,MAAkB;AAAA,QACpE;AAAA,MACF;AAAA,MACA,EAAE,iBAAiB,KAAK;AAAA,IAAC;AAAA,EAC3B;AACF;AAEA,IAAO,mBAAQ,IAAI,gBAAgB;",
+  "names": ["BaseApiService", "axios"]
+}
