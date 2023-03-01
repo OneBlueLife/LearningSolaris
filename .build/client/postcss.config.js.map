@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../client/postcss.config.js"],
-  "sourcesContent": ["module.exports = {\n  plugins: {\n    autoprefixer: {}\n  }\n}\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACf,SAAS;AAAA,IACP,cAAc,CAAC;AAAA,EACjB;AACF;",
-  "names": []
-}

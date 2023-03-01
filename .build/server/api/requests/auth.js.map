@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/api/requests/auth.ts"],
-  "sourcesContent": ["import * as Joi from 'joi';\n\nexport const authLoginRequestSchema = Joi.object({\n  email: Joi.string().required().email().message('Email is required and must be a valid email address.'),\n  password: Joi.string().required().messages({\n    'string.empty': 'Password is required.'\n  })\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,UAAqB;AAEd,MAAM,yBAAyB,IAAI,OAAO;AAAA,EAC/C,OAAO,IAAI,OAAO,EAAE,SAAS,EAAE,MAAM,EAAE,QAAQ,sDAAsD;AAAA,EACrG,UAAU,IAAI,OAAO,EAAE,SAAS,EAAE,SAAS;AAAA,IACzC,gBAAgB;AAAA,EAClB,CAAC;AACH,CAAC;",
-  "names": []
-}

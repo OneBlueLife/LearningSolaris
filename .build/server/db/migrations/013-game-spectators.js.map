@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/013-game-spectators.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'spectators': { $eq: null }\n        }, {\n            $set: {\n                'spectators': []\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,cAAc,EAAE,KAAK,KAAK;AAAA,IAC9B,GAAG;AAAA,MACC,MAAM;AAAA,QACF,cAAc,CAAC;AAAA,MACnB;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

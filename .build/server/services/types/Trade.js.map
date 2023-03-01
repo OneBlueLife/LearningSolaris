@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Trade.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { ResearchTypeNotRandom } from \"./Player\";\n\nexport interface TradeTechnology {\n    name: ResearchTypeNotRandom;\n    level: number;\n    cost: number;\n};\n\nexport interface TradeEvent {\n    playerId: DBObjectId;\n    type: string;\n    data;\n    sentDate: Date;\n    sentTick: number;\n};\n\nexport interface TradeEventTechnology {\n    name: string;\n    level: number;\n    difference: number;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAOC;AAQA;AAMA;",
-  "names": []
-}

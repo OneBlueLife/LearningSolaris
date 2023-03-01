@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Report.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport interface ReportReasons {\n    abuse: boolean;\n    spamming: boolean;\n    multiboxing: boolean;\n    inappropriateAlias: boolean;\n};\n\nexport interface Report {\n    _id: DBObjectId;\n    gameId: DBObjectId;\n    reportedPlayerId: DBObjectId;\n    reportedUserId: DBObjectId;\n    reportedPlayerAlias: string;\n    reportedByPlayerId: DBObjectId;\n    reportedByUserId: DBObjectId;\n    reportedByPlayerAlias: string;\n    reasons: ReportReasons,\n    actioned: boolean;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAOC;AAaA;",
-  "names": []
-}

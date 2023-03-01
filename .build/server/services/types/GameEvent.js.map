@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/GameEvent.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport interface GameEvent {\n    _id: DBObjectId;\n    gameId: DBObjectId;\n    playerId: DBObjectId | null;\n    tick: number;\n    type: string;\n    data;\n    read: boolean;\n\n    date?: Date;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAYC;",
-  "names": []
-}

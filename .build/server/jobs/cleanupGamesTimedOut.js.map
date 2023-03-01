@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../server/jobs/cleanupGamesTimedOut.ts"],
-  "sourcesContent": ["import { DependencyContainer } from \"../services/types/DependencyContainer\";\n\nexport default (container: DependencyContainer) => {\n\n    return {\n\n        async handler(job, done) {\n            let games = await container.gameListService.listGamesTimedOutWaitingForPlayers();\n\n            for (let i = 0; i < games.length; i++) {\n                let game = games[i];\n\n                // Do not delete featured games.\n                if (container.gameTypeService.isFeaturedGame(game)) {\n                    continue;\n                }\n\n                try {\n                    await container.emailService.sendGameTimedOutEmail(game._id);\n                    await container.gameService.delete(game);\n                } catch (e) {\n                    console.error(e);\n                }\n            }\n\n            done();\n        }\n\n    };\n    \n};\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,IAAO,+BAAQ,CAAC,cAAmC;AAE/C,SAAO;AAAA,IAEH,MAAM,QAAQ,KAAK,MAAM;AACrB,UAAI,QAAQ,MAAM,UAAU,gBAAgB,mCAAmC;AAE/E,eAAS,IAAI,GAAG,IAAI,MAAM,QAAQ,KAAK;AACnC,YAAI,OAAO,MAAM;AAGjB,YAAI,UAAU,gBAAgB,eAAe,IAAI,GAAG;AAChD;AAAA,QACJ;AAEA,YAAI;AACA,gBAAM,UAAU,aAAa,sBAAsB,KAAK,GAAG;AAC3D,gBAAM,UAAU,YAAY,OAAO,IAAI;AAAA,QAC3C,SAAS,GAAP;AACE,kBAAQ,MAAM,CAAC;AAAA,QACnB;AAAA,MACJ;AAEA,WAAK;AAAA,IACT;AAAA,EAEJ;AAEJ;",
-  "names": []
-}

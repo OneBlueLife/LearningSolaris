@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Conversation.ts"],
-  "sourcesContent": ["import { ConversationMessage } from \"./ConversationMessage\";\nimport { DBObjectId } from \"./DBObjectId\";\nimport { TradeEvent } from \"./Trade\";\n\nexport interface Conversation {\n    _id: DBObjectId;\n    participants: DBObjectId[];\n    createdBy: DBObjectId | null;\n    name: string;\n    mutedBy?: DBObjectId[];\n    messages: (ConversationMessage | TradeEvent)[];\n\n    lastMessage?: ConversationMessage;\n    unreadCount?: number;\n    isMuted?: boolean;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAeC;",
-  "names": []
-}

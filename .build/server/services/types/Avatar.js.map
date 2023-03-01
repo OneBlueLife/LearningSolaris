@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Avatar.ts"],
-  "sourcesContent": ["export interface Avatar {\n    id: number;\n    file: string;\n    name: string;\n    description: string;\n    price: number;\n    isPatronAvatar: boolean;\n};\n\nexport interface UserAvatar extends Avatar {\n    purchased: boolean;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAOC;AAIA;",
-  "names": []
-}

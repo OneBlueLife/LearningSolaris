@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/007-experimental-experimentation-setting.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'settings.technology.experimentationReward': { $eq: null }\n        }, {\n            $set: {\n                'settings.technology.experimentationReward': 'standard'\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,6CAA6C,EAAE,KAAK,KAAK;AAAA,IAC7D,GAAG;AAAA,MACC,MAAM;AAAA,QACF,6CAA6C;AAAA,MACjD;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

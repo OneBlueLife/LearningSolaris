@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Badge.ts"],
-  "sourcesContent": ["export interface Badge {\n    key: string;\n    name: string;\n    description: string;\n    price: number;\n};\n\nexport interface UserBadge extends Badge {\n    awarded: number;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAKC;AAIA;",
-  "names": []
-}

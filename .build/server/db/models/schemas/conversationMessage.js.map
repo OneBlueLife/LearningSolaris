@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../server/db/models/schemas/conversationMessage.ts"],
-  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nconst schema = new Schema({\n    fromPlayerId: { type: Types.ObjectId, required: false },\n    fromPlayerAlias: { type: Types.String, required: true },\n    message: { type: Types.String, required: true },\n    sentDate: { type: Types.Date, required: true },\n    sentTick: { type: Types.Number, required: false, default: null },\n    pinned: { type: Types.Boolean, required: false, default: false },\n    readBy: [{ type: Types.ObjectId, required: true }]\n});\n\nexport default schema;\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAErB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,cAAc,EAAE,MAAM,MAAM,UAAU,UAAU,MAAM;AAAA,EACtD,iBAAiB,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EACtD,SAAS,EAAE,MAAM,MAAM,QAAQ,UAAU,KAAK;AAAA,EAC9C,UAAU,EAAE,MAAM,MAAM,MAAM,UAAU,KAAK;AAAA,EAC7C,UAAU,EAAE,MAAM,MAAM,QAAQ,UAAU,OAAO,SAAS,KAAK;AAAA,EAC/D,QAAQ,EAAE,MAAM,MAAM,SAAS,UAAU,OAAO,SAAS,MAAM;AAAA,EAC/D,QAAQ,CAAC,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK,CAAC;AACrD,CAAC;AAED,IAAO,8BAAQ;",
-  "names": []
-}

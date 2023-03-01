@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../server/db/models/schemas/guild.ts"],
-  "sourcesContent": ["const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst Types = Schema.Types;\n\nconst schema = new Schema({\n    name: { type: Types.String, required: true, minlength: 4, maxlength: 31 },\n    tag: { type: Types.String, required: true, minlength: 2, maxlength: 4 },\n    leader: { type: Types.ObjectId, required: true },\n    officers: [{ type: Types.ObjectId }],\n    members: [{ type: Types.ObjectId }],\n    invitees: [{ type: Types.ObjectId }],\n    applicants: [{ type: Types.ObjectId }]\n});\n\nexport default schema;\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,WAAW,QAAQ,UAAU;AACnC,MAAM,SAAS,SAAS;AACxB,MAAM,QAAQ,OAAO;AAErB,MAAM,SAAS,IAAI,OAAO;AAAA,EACtB,MAAM,EAAE,MAAM,MAAM,QAAQ,UAAU,MAAM,WAAW,GAAG,WAAW,GAAG;AAAA,EACxE,KAAK,EAAE,MAAM,MAAM,QAAQ,UAAU,MAAM,WAAW,GAAG,WAAW,EAAE;AAAA,EACtE,QAAQ,EAAE,MAAM,MAAM,UAAU,UAAU,KAAK;AAAA,EAC/C,UAAU,CAAC,EAAE,MAAM,MAAM,SAAS,CAAC;AAAA,EACnC,SAAS,CAAC,EAAE,MAAM,MAAM,SAAS,CAAC;AAAA,EAClC,UAAU,CAAC,EAAE,MAAM,MAAM,SAAS,CAAC;AAAA,EACnC,YAAY,CAAC,EAAE,MAAM,MAAM,SAAS,CAAC;AACzC,CAAC;AAED,IAAO,gBAAQ;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/005-add-alliance-upkeep-multiplier-constants.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'constants.diplomacy.upkeepExpenseMultipliers': { $eq: null }\n        }, {\n            $set: {\n                'constants.diplomacy.upkeepExpenseMultipliers': {\n                    none: 0,\n                    cheap: 0.02,\n                    standard: 0.05,\n                    expensive: 0.10\n                }\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,gDAAgD,EAAE,KAAK,KAAK;AAAA,IAChE,GAAG;AAAA,MACC,MAAM;AAAA,QACF,gDAAgD;AAAA,UAC5C,MAAM;AAAA,UACN,OAAO;AAAA,UACP,UAAU;AAAA,UACV,WAAW;AAAA,QACf;AAAA,MACJ;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

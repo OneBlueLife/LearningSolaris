@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Payment.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport interface Payment {\n    _id: DBObjectId;\n    userId: DBObjectId;\n    paymentId: string;\n    totalCost: number;\n    totalQuantity: number;\n    unitCost: number;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AASC;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/015-game-capital-star-elimination-settings.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'settings.conquest.capitalStarElimination': { $eq: null }\n        }, {\n            $set: {\n                'settings.conquest.capitalStarElimination': 'disabled'\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,4CAA4C,EAAE,KAAK,KAAK;AAAA,IAC5D,GAAG;AAAA,MACC,MAAM;AAAA,QACF,4CAA4C;AAAA,MAChD;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

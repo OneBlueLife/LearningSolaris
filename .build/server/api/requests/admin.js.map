@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/api/requests/admin.ts"],
-  "sourcesContent": ["import * as Joi from 'joi';\n\nexport const adminSetUserRoleRequestSchema = Joi.object({\n    enabled: Joi.boolean().required()\n});\n\nexport const adminSetUserCreditsRequestSchema = Joi.object({\n    credits: Joi.number().required()\n});\n\nexport const adminSetGameFeaturedRequestSchema = Joi.object({\n    featured: Joi.boolean().required()\n});\n\nexport const adminSetGameTimeMachineRequestSchema = Joi.object({\n    timeMachine: Joi.string().required().valid('enabled', 'disabled')\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,UAAqB;AAEd,MAAM,gCAAgC,IAAI,OAAO;AAAA,EACpD,SAAS,IAAI,QAAQ,EAAE,SAAS;AACpC,CAAC;AAEM,MAAM,mCAAmC,IAAI,OAAO;AAAA,EACvD,SAAS,IAAI,OAAO,EAAE,SAAS;AACnC,CAAC;AAEM,MAAM,oCAAoC,IAAI,OAAO;AAAA,EACxD,UAAU,IAAI,QAAQ,EAAE,SAAS;AACrC,CAAC;AAEM,MAAM,uCAAuC,IAAI,OAAO;AAAA,EAC3D,aAAa,IAAI,OAAO,EAAE,SAAS,EAAE,MAAM,WAAW,UAAU;AACpE,CAAC;",
-  "names": []
-}

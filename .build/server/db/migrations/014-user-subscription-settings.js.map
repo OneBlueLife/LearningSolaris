@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/014-user-subscription-settings.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const users = db.collection('users');\n\n        await users.updateMany({\n            'subscriptions': { $ne: null },\n            'subscriptions.settings': { $eq: null }\n        }, {\n            $set: {\n                'subscriptions.settings': {\n                    'notifyActiveGamesOnly': false\n                }\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,iBAAiB,EAAE,KAAK,KAAK;AAAA,MAC7B,0BAA0B,EAAE,KAAK,KAAK;AAAA,IAC1C,GAAG;AAAA,MACC,MAAM;AAAA,QACF,0BAA0B;AAAA,UACtB,yBAAyB;AAAA,QAC7B;AAAA,MACJ;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

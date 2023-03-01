@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/002-alliance-settings.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            $and: [\n                { 'settings.player.alliances': { $ne: null } },\n                { 'settings.diplomacy': { $eq: null } }\n            ]\n        }, [{\n            $set: {\n                'settings.diplomacy': {\n                    enabled: '$settings.player.alliances',\n                    globalEvents: 'disabled'\n                }\n            }\n        }]);\n\n        await games.updateMany({\n            'settings.player.alliances': { $ne: null }\n        }, {\n            $unset: {\n                'settings.player.alliances': undefined\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,MAAM;AAAA,QACF,EAAE,6BAA6B,EAAE,KAAK,KAAK,EAAE;AAAA,QAC7C,EAAE,sBAAsB,EAAE,KAAK,KAAK,EAAE;AAAA,MAC1C;AAAA,IACJ,GAAG,CAAC;AAAA,MACA,MAAM;AAAA,QACF,sBAAsB;AAAA,UAClB,SAAS;AAAA,UACT,cAAc;AAAA,QAClB;AAAA,MACJ;AAAA,IACJ,CAAC,CAAC;AAEF,UAAM,MAAM,WAAW;AAAA,MACnB,6BAA6B,EAAE,KAAK,KAAK;AAAA,IAC7C,GAAG;AAAA,MACC,QAAQ;AAAA,QACJ,6BAA6B;AAAA,MACjC;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

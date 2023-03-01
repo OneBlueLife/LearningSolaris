@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/ConversationMessage.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\n\nexport interface ConversationMessage {\n    _id?: DBObjectId;\n    fromPlayerId: DBObjectId | null;\n    fromPlayerAlias: string;\n    message: string;\n    sentDate: Date;\n    sentTick: number | null;\n    pinned: boolean;\n    readBy: DBObjectId[];\n\n    type?: 'message'|'event';\n};\n\nexport interface ConversationMessageSentResult extends ConversationMessage {\n    conversationId: DBObjectId;\n    toPlayerIds: DBObjectId[];\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAaC;AAKA;",
-  "names": []
-}

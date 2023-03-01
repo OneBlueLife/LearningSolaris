@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/UserLevel.ts"],
-  "sourcesContent": ["export interface UserLevel {\n    id: number;\n    name: string;\n    rankPoints: number;\n    rankPointsNext?: number | null;\n    rankPointsProgress?: number | null;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAMC;",
-  "names": []
-}

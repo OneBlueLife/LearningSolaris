@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../server/errors/validation.ts"],
-  "sourcesContent": ["export default class ValidationError extends Error {\n    statusCode: number;\n\n    constructor(err: string | string[], statusCode?: number) {\n        super(err as any);\n\n        this.statusCode = statusCode || 400;\n    }\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAO,wBAAsC,MAAM;AAAA,EAG/C,YAAY,KAAwB,YAAqB;AACrD,UAAM,GAAU;AAEhB,SAAK,aAAa,cAAc;AAAA,EACpC;AACJ;AAAC;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/api/requests/badges.ts"],
-  "sourcesContent": ["import * as Joi from 'joi';\n\nexport const badgesPurchaseBadgeRequestSchema = Joi.object({\n    badgeKey: Joi.string().required()\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,UAAqB;AAEd,MAAM,mCAAmC,IAAI,OAAO;AAAA,EACvD,UAAU,IAAI,OAAO,EAAE,SAAS;AACpC,CAAC;",
-  "names": []
-}

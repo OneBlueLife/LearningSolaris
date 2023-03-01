@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Ai.ts"],
-  "sourcesContent": ["export interface KnownAttack {\n    arrivalTick: number;\n    starId: string;\n    carriersOnTheWay: string[];\n}\n\nexport interface InvasionInProgress {\n    arrivalTick: number;\n    star: string;\n}\n\nexport interface AiState {\n    knownAttacks: KnownAttack[];\n    invasionsInProgress: InvasionInProgress[];\n    startedClaims: string[];\n}"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
-  "names": []
-}

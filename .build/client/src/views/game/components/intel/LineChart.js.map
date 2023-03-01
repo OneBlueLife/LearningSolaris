@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../../../client/src/views/game/components/intel/LineChart.js"],
-  "sourcesContent": ["import { Line, mixins } from 'vue-chartjs'\nconst { reactiveProp } = mixins\n\nexport default {\n  extends: Line,\n  mixins: [reactiveProp],\n  props: ['options'],\n  mounted () {\n    // eslint-disable-next-line\n    Chart.defaults.global.defaultFontColor = '#fff'\n\n    // this.chartData is created in the mixin.\n    // If you want to pass options please create a local options object\n    this.renderChart(this.chartData, this.options)\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBAA6B;AAC7B,MAAM,EAAE,aAAa,IAAI;AAEzB,IAAO,oBAAQ;AAAA,EACb,SAAS;AAAA,EACT,QAAQ,CAAC,YAAY;AAAA,EACrB,OAAO,CAAC,SAAS;AAAA,EACjB,UAAW;AAET,UAAM,SAAS,OAAO,mBAAmB;AAIzC,SAAK,YAAY,KAAK,WAAW,KAAK,OAAO;AAAA,EAC/C;AACF;",
-  "names": []
-}

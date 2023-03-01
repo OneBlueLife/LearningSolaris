@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../server/services/types/events/GamePlayerAFK.ts"],
-  "sourcesContent": ["import { BaseGameEvent } from \"./BaseGameEvent\";\n\nexport default interface GamePlayerAFKEvent extends BaseGameEvent {\n    playerAlias: string;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAIC;",
-  "names": []
-}

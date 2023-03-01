@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/api/middleware/index.ts"],
-  "sourcesContent": ["import { DependencyContainer } from \"../../services/types/DependencyContainer\";\nimport { CoreMiddleware, middleware as core } from './core';\nimport { AuthMiddleware, middleware as auth } from './auth';\nimport { GameMiddleware, middleware as game } from './game';\nimport { PlayerMiddleware, middleware as player } from './player';\n\nexport interface MiddlewareContainer {\n    core: CoreMiddleware,\n    auth: AuthMiddleware,\n    game: GameMiddleware,\n    player: PlayerMiddleware\n};\n\nexport default (container: DependencyContainer) => {\n    return {\n        core: core(),\n        auth: auth(container),\n        game: game(container),\n        player: player(container)\n    };\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,kBAAmD;AACnD,kBAAmD;AACnD,kBAAmD;AACnD,oBAAuD;AAOtD;AAED,IAAO,qBAAQ,CAAC,cAAmC;AAC/C,SAAO;AAAA,IACH,UAAM,YAAAA,YAAK;AAAA,IACX,UAAM,YAAAC,YAAK,SAAS;AAAA,IACpB,UAAM,YAAAC,YAAK,SAAS;AAAA,IACpB,YAAQ,cAAAC,YAAO,SAAS;AAAA,EAC5B;AACJ;",
-  "names": ["core", "auth", "game", "player"]
-}

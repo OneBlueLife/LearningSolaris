@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/InfrastructureUpgrade.ts"],
-  "sourcesContent": ["import { DBObjectId } from \"./DBObjectId\";\nimport { InfrastructureType, Star } from \"./Star\";\n\nexport interface BulkUpgradeReport {\n    budget: number;\n    stars;\n    cost: number;\n    upgraded: number;\n    infrastructureType: InfrastructureType;\n    ignoredCount: number;\n    currentResearchTicksEta?: number | null;\n    nextResearchTicksEta?: number | null;\n};\n\nexport interface InfrastructureUpgradeCosts {\n    economy: number | null;\n    industry: number | null;\n    science: number | null;\n    warpGate: number | null;\n    carriers: number | null;\n};\n\nexport interface InfrastructureUpgradeReport {\n    playerId: DBObjectId;\n    starId: DBObjectId;\n    starName: string;\n    infrastructure: number;\n    cost: number;\n    nextCost: number;\n    manufacturing?: number;\n    currentResearchTicksEta?: number | null;\n    nextResearchTicksEta?: number | null;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAYC;AAQA;AAYA;",
-  "names": []
-}

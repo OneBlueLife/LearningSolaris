@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Dimensions.ts"],
-  "sourcesContent": ["export interface GalaxyDimensions {\n    minX: number;\n    minY: number;\n    maxX: number;\n    maxY: number;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAKC;",
-  "names": []
-}

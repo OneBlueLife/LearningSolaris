@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/services/types/Carrier.ts"],
-  "sourcesContent": ["import { Location } from \"./Location\";\nimport { CarrierWaypoint } from \"./CarrierWaypoint\";\nimport { MapObject } from \"./Map\";\nimport { DBObjectId } from \"./DBObjectId\";\nimport { Specialist } from \"./Specialist\";\nimport { PlayerTechnologyLevels } from \"./Player\";\n\nexport interface Carrier extends MapObject {\n    orbiting: DBObjectId | null;\n    waypointsLooped: boolean;\n    name: string;\n    ships: number | null;\n    specialistId: number | null;\n    specialistExpireTick: number | null;\n    specialist: Specialist | null;\n    isGift: boolean;\n    waypoints: CarrierWaypoint[];\n    ticksEta?: number | null;\n    ticksEtaTotal?: number | null;\n    locationNext: Location | null;\n    distanceToDestination?: number;\n    effectiveTechs?: PlayerTechnologyLevels;\n\n    toObject(): Carrier;\n};\n\nexport interface CarrierPosition {\n    carrier: Carrier;\n    source: DBObjectId;\n    destination: DBObjectId;\n    locationCurrent: Location;\n    locationNext: Location;\n    distanceToSourceCurrent: number;\n    distanceToDestinationCurrent: number;\n    distanceToSourceNext: number;\n    distanceToDestinationNext: number;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAwBC;AAYA;",
-  "names": []
-}

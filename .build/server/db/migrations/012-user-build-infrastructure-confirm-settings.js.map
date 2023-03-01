@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/012-user-build-infrastructure-confirm-settings.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const users = db.collection('users');\n\n        await users.updateMany({\n            'gameSettings.star': { $eq: null }\n        }, {\n            $set: {\n                'gameSettings.star': {\n                    confirmBuildEconomy: 'disabled',\n                    confirmBuildIndustry: 'disabled',\n                    confirmBuildScience: 'disabled',\n                }\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,qBAAqB,EAAE,KAAK,KAAK;AAAA,IACrC,GAAG;AAAA,MACC,MAAM;AAAA,QACF,qBAAqB;AAAA,UACjB,qBAAqB;AAAA,UACrB,sBAAsB;AAAA,UACtB,qBAAqB;AAAA,QACzB;AAAA,MACJ;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

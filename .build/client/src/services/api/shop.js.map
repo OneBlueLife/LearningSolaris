@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../client/src/services/api/shop.js"],
-  "sourcesContent": ["import axios from 'axios'\nimport BaseApiService from './base'\n\nclass ShopApiService extends BaseApiService {\n  \n  purchaseGalacticCredits (amount) {\n    return axios.get(this.BASE_URL + 'shop/galacticcredits/purchase?amount=' + amount.toString(),\n      { withCredentials: true })\n  }\n\n}\n\nexport default new ShopApiService()\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAClB,kBAA2B;AAE3B,MAAM,uBAAuB,YAAAA,QAAe;AAAA,EAE1C,wBAAyB,QAAQ;AAC/B,WAAO,aAAAC,QAAM;AAAA,MAAI,KAAK,WAAW,0CAA0C,OAAO,SAAS;AAAA,MACzF,EAAE,iBAAiB,KAAK;AAAA,IAAC;AAAA,EAC7B;AAEF;AAEA,IAAO,eAAQ,IAAI,eAAe;",
-  "names": ["BaseApiService", "axios"]
-}

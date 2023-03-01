@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../server/services/types/events/PlayerGalacticCycleComplete.ts"],
-  "sourcesContent": ["import { BaseGameEvent } from \"./BaseGameEvent\";\n\nexport default interface PlayerGalacticCycleCompleteEvent extends BaseGameEvent {\n    creditsEconomy: number;\n    creditsBanking: number;\n    creditsSpecialists: number;\n    experimentTechnology: string | null;\n    experimentTechnologyLevel: number | null;\n    experimentAmount: number | null;\n    experimentLevelUp: boolean | null;\n    experimentResearchingNext: string | null;\n    carrierUpkeep: {\n        carrierCount: number;\n        totalCost: number\n    } | null;\n    allianceUpkeep: {\n        allianceCount: number;\n        totalCost: number;\n    } | null;\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAmBC;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/config/types/Config.ts"],
-  "sourcesContent": ["export interface Config {\n    port?: string;\n    sessionSecret?: string;\n    sessionSecureCookies: boolean;\n    connectionString?: string;\n    serverUrl?: string;\n    clientUrl?: string;\n    cacheEnabled: boolean;\n    smtp: {\n        enabled: boolean;\n        host?: string;\n        port?: string;\n        from?: string;\n    },\n    google: {\n        recaptcha: {\n            enabled: boolean;\n            siteKey?: string;\n            secretKey?: string;\n        }\n    },\n    paypal: {\n        environment: string;\n        clientId?: string;\n        clientSecret?: string;\n    },\n    discord: {\n        serverId?: string;\n        clientId?: string;\n        clientSecret?: string;\n        oauthRedirectUri?: string;\n        botToken?: string;\n    }\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAiCC;",
-  "names": []
-}

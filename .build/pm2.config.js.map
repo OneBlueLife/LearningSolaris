@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../pm2.config.js"],
-  "sourcesContent": ["module.exports = {\n  apps: [\n    {\n      name: \"solaris-jobs\",\n      script: \"npm\",\n      args: \"run start-jobs:dev\",\n      cwd: \"server\",\n      watch: false\n    },\n    {\n      name: \"solaris-api\",\n      script: \"npm\",\n      args: \"run start-api:dev\",\n      cwd: \"server\",\n      watch: false\n    },\n    {\n      name: \"solaris-client\",\n      script: \"npm run serve\",\n      cwd: \"client\",\n      watch: false\n    }\n  ]\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACf,MAAM;AAAA,IACJ;AAAA,MACE,MAAM;AAAA,MACN,QAAQ;AAAA,MACR,MAAM;AAAA,MACN,KAAK;AAAA,MACL,OAAO;AAAA,IACT;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,QAAQ;AAAA,MACR,MAAM;AAAA,MACN,KAAK;AAAA,MACL,OAAO;AAAA,IACT;AAAA,IACA;AAAA,MACE,MAAM;AAAA,MACN,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,OAAO;AAAA,IACT;AAAA,EACF;AACF;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../client/src/services/api/auth.js"],
-  "sourcesContent": ["import axios from 'axios'\nimport BaseApiService from './base'\n\nclass AuthService extends BaseApiService {\n  login (email, password) {\n    return axios.post(this.BASE_URL + 'auth/login', {\n      email: email,\n      password: password\n    },\n    {\n      withCredentials: true\n    })\n  }\n\n  logout () {\n    return axios.post(this.BASE_URL + 'auth/logout', {}, { withCredentials: true })\n  }\n\n  verify () {\n    return axios.post(this.BASE_URL + 'auth/verify', {}, { withCredentials: true })\n  }\n\n  clearOauthDiscord () {\n    return axios.delete(this.BASE_URL + 'auth/discord', { withCredentials: true })\n  }\n}\n\nexport default new AuthService()\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAClB,kBAA2B;AAE3B,MAAM,oBAAoB,YAAAA,QAAe;AAAA,EACvC,MAAO,OAAO,UAAU;AACtB,WAAO,aAAAC,QAAM;AAAA,MAAK,KAAK,WAAW;AAAA,MAAc;AAAA,QAC9C;AAAA,QACA;AAAA,MACF;AAAA,MACA;AAAA,QACE,iBAAiB;AAAA,MACnB;AAAA,IAAC;AAAA,EACH;AAAA,EAEA,SAAU;AACR,WAAO,aAAAA,QAAM,KAAK,KAAK,WAAW,eAAe,CAAC,GAAG,EAAE,iBAAiB,KAAK,CAAC;AAAA,EAChF;AAAA,EAEA,SAAU;AACR,WAAO,aAAAA,QAAM,KAAK,KAAK,WAAW,eAAe,CAAC,GAAG,EAAE,iBAAiB,KAAK,CAAC;AAAA,EAChF;AAAA,EAEA,oBAAqB;AACnB,WAAO,aAAAA,QAAM,OAAO,KAAK,WAAW,gBAAgB,EAAE,iBAAiB,KAAK,CAAC;AAAA,EAC/E;AACF;AAEA,IAAO,eAAQ,IAAI,YAAY;",
-  "names": ["BaseApiService", "axios"]
-}

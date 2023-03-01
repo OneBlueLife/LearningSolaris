@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/016-game-leaderboard-state.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'state.leaderboard': { $exists: false }\n        }, {\n            $set: {\n                'state.leaderboard': null\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,qBAAqB,EAAE,SAAS,MAAM;AAAA,IAC1C,GAAG;AAAA,MACC,MAAM;AAAA,QACF,qBAAqB;AAAA,MACzB;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}

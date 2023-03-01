@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../server/services/cache.ts"],
-  "sourcesContent": ["import { Config } from \"../config/types/Config\";\n\nconst cache = require('memory-cache');\n\nexport default class CacheService {\n    \n    config: Config;\n\n    constructor(config: Config) {\n        this.config = config;\n    }\n\n    put(key: string, obj, time: number) {\n        if (this.config.cacheEnabled) {\n            return cache.put(key, obj, time);\n        }\n\n        return null;\n    }\n\n    get(key: string) {\n        if (this.config.cacheEnabled) {\n            return cache.get(key);\n        }\n\n        return null;\n    }\n    \n};\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,MAAM,QAAQ,QAAQ,cAAc;AAEpC,MAAO,aAA2B;AAAA,EAI9B,YAAY,QAAgB;AACxB,SAAK,SAAS;AAAA,EAClB;AAAA,EAEA,IAAI,KAAa,KAAK,MAAc;AAChC,QAAI,KAAK,OAAO,cAAc;AAC1B,aAAO,MAAM,IAAI,KAAK,KAAK,IAAI;AAAA,IACnC;AAEA,WAAO;AAAA,EACX;AAAA,EAEA,IAAI,KAAa;AACb,QAAI,KAAK,OAAO,cAAc;AAC1B,aAAO,MAAM,IAAI,GAAG;AAAA,IACxB;AAEA,WAAO;AAAA,EACX;AAEJ;AAAC;",
-  "names": []
-}

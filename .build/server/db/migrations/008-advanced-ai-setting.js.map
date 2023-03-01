@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../server/db/migrations/008-advanced-ai-setting.js"],
-  "sourcesContent": ["module.exports = {\n    async migrate(db) {\n        const games = db.collection('games');\n\n        await games.updateMany({\n            'settings.general.advancedAI': { $eq: null }\n        }, {\n            $set: {\n                'settings.general.advancedAI': 'disabled'\n            }\n        });\n    }\n};\n"],
-  "mappings": ";AAAA,OAAO,UAAU;AAAA,EACb,MAAM,QAAQ,IAAI;AACd,UAAM,QAAQ,GAAG,WAAW,OAAO;AAEnC,UAAM,MAAM,WAAW;AAAA,MACnB,+BAA+B,EAAE,KAAK,KAAK;AAAA,IAC/C,GAAG;AAAA,MACC,MAAM;AAAA,QACF,+BAA+B;AAAA,MACnC;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
-  "names": []
-}
